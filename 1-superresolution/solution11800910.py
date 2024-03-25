@@ -1,7 +1,7 @@
 '''
     @Name: Felipe Andrade Garcia Tommaselli
     @Number: 11800910
-    @Course: SCC0722
+    @Course: SCC0651
     @Year: 2024.1
     @Title: Assign 1- Image Enhacement
 '''
