@@ -2,6 +2,8 @@
     @Name: Felipe Andrade Garcia Tommaselli
     @Number: 11800910
     @Course: SCC0722
+    @Year: 2024.1
+    @Title: Assign 1- Image Enhacement
 '''
 
 # Importação das bibliotecas necessárias
@@ -152,7 +154,7 @@ def select_kp(f_option, low_images, gamma_value):
 # Função principal que executa o código
 if __name__ == "__main__":
     # Chamada para imprimir arte ASCII
-    ascii_art()
+    #ascii_art()
     # Entrada dos nomes das imagens e outras informações pelo usuário
     image_low_res = input().rstrip()
     image_high_res = input().rstrip()
@@ -162,15 +164,17 @@ if __name__ == "__main__":
     # Carregamento das imagens de baixa resolução e da imagem de alta resolução
     low_images = list()
     for typ in range(0, 4):
-        image = iiv3.imread('test_cases/' + str(image_low_res) + str(typ) + '.png')
+        #image = iiv3.imread('test_cases/' + str(image_low_res) + str(typ) + '.png')
+        image = iiv3.imread(str(image_low_res) + str(typ) + '.png')
         low_images.append(image)
-    image_high_res = iiv3.imread('test_cases/' + image_high_res)
+    #image_high_res = iiv3.imread('test_cases/' + image_high_res)
+    image_high_res = iiv3.imread(image_high_res)
 
     # Impressão do resultado final
-    print('\nErro final:', end=' ')
+    #print('\nErro final:', end=' ')
 
     # Seleção do tipo de pré-processamento e aplicação
     out_image = select_kp(f_option, low_images, gamma_value)
     error = hyper_resolution(out_image, image_high_res)
 
-    print(error)
+    print(f'{error:.4f}')
